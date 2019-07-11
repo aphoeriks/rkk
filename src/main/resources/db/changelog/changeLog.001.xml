@@ -1,0 +1,25 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd">
+    <changeSet author="mikhail.struchkov" id="1562743138216-1">
+        <createTable tableName="PROJECTS">
+            <column autoIncrement="true" name="ID" type="INT">
+                <constraints primaryKey="true" primaryKeyName="PROJECTS_PK"/>
+            </column>
+            <column name="PROJECT_NAME" type="VARCHAR(2147483647)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="mikhail.struchkov" id="1562743138216-2">
+        <dropTable tableName="USERS"/>
+    </changeSet>
+    <changeSet author="mikhail.struchkov" id="1562743138216-3">
+        <createTable tableName="USERS">
+            <column name="USER" type="VARCHAR(255)"/>
+            <column name="ADDRESS" type="VARCHAR(255)"/>
+            <column autoIncrement="true" name="ID" type="INT">
+                <constraints primaryKey="true" primaryKeyName="USERS_PK"/>
+            </column>
+        </createTable>
+    </changeSet>
+</databaseChangeLog>

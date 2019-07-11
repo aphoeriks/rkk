@@ -13,5 +13,5 @@
             <column name="address" type="varchar(255)" />
         </createTable>
     </changeSet>
-
+    <include file="db/changelog/changeLog.001.xml"/>
 </databaseChangeLog>
